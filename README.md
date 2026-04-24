@@ -34,17 +34,6 @@ End-to-end analytics project on a real-world used car auction dataset. Raw messy
 **Final dataset: 537,028 rows · 13 columns · Jan 2014 → Dec 2015**
 
 ---
-
-## Key Insights
-
-- February is the strongest month by both volume (155K units) and revenue
-- Q1 dominates — Q3 and Q4 are significantly weaker
-- When volume drops, avg price rises — sparse months sell premium inventory only
-- Florida and California account for over €2bn in revenue
-- Budget segment drives 44.8% of total revenue through volume
-
----
-
 ## Tools
 
 Python · pandas · numpy · Power BI Desktop · DAX · GitHub
