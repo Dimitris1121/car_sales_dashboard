@@ -90,26 +90,6 @@ All cleaning was performed in Python using `pandas` and `numpy` before loading i
 
 ---
 
-## Project Structure
-
-```
-car-sales-dashboard/
-│
-├── data/
-│   ├── car_sales_raw.csv          # Original dataset (from Kaggle)
-│   └── cars_dataset_cleaned.csv   # Cleaned dataset ready for Power BI
-│
-├── notebooks/
-│   └── cleaning.py                # Full Python cleaning script
-│
-├── powerbi/
-│   └── CarSalesDashboard.pbix     # Power BI report file
-│
-└── README.md
-```
-
----
-
 ## Tools & Technologies
 
 | Tool | Purpose |
