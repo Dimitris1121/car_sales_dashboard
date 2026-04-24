@@ -31,7 +31,7 @@ End-to-end analytics project on a real-world used car auction dataset. Raw messy
 | Prices under $100 or over $200,000 | Dropped as data errors |
 | Transmission column (11.7% null) | Dropped entirely |
 
-**Final dataset: 537,028 rows · 13 columns · Jan 2014 → Dec 2015**
+**Final dataset: 537,028 rows · 13 columns**
 
 ---
 ## Tools
