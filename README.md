@@ -64,39 +64,6 @@ All cleaning was performed in Python using `pandas` and `numpy` before loading i
 | Transmission column | 11.7% null | Dropped entirely |
 | Date format | All rows | Sliced to `str[:15]` and parsed with `format='%a %b %d %Y'` |
 
-### Key cleaning steps
-
-```python
-# Fix condition scale — values entered on 0–50 scale instead of 0–5
-df['condition'] = df['condition'].apply(lambda x: x/10 if x > 5 else x)
-
-# Replace odometer placeholders
-df['odometer'] = df['odometer'].replace(999999, np.nan)
-
-# Impute odometer with make/model median (more accurate than global)
-df['odometer'] = df.groupby(['make','model'])['odometer'].transform(
-    lambda x: x.fillna(x.median())
-)
-
-# Parse complex date format
-df['saledate'] = pd.to_datetime(
-    df['saledate'].str[:15],
-    format='%a %b %d %Y',
-    errors='coerce'
-)
-
-# Fix mixed case body types
-df['body'] = df['body'].str.strip().str.title()
-df['body'] = df['body'].replace({'Suv': 'SUV'})
-
-# Standardise state codes
-df['state'] = df['state'].str.upper().str.strip()
-
-# Remove price outliers
-df = df[df['sellingprice'] >= 100]
-df = df[df['sellingprice'] < 200000]
-df = df[df['mmr'] >= 100]
-```
 
 ### Final dataset
 
